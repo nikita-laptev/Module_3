@@ -2,7 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import (
     RegisterView, LoginView, LogoutView, MissionViewSet, SpaceFlightViewSet,
-    BookingViewSet, SearchView, WatermarkView
+    BookingViewSet, SearchView, WatermarkView, GagarinFlightView
 )
 
 # Создаем маршрутизатор и регистрируем ViewSet'ы
@@ -25,4 +25,6 @@ urlpatterns = [
 
     # Генерация изображения с водяным знаком
     path('lunar-watermark/', WatermarkView.as_view(), name='lunar-watermark'),
+
+    path('gagarin-flight/', GagarinFlightView.as_view(), name='gagarin-flight'),
 ]
